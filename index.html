@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>weapp-snail-books</title>
     <style>
-      .done {
+      li.done {
         text-decoration:line-through;
       }
     </style>
@@ -16,12 +16,12 @@
       <p>{{subtitle}}</p>
       <div>
         <input type="text" v-model="inputText"/>
-        <button @Click="handleClick">提交</button>
+        <button @click="handleClick">提交</button>
         <button @click="handleClean">清空已完成的</button>
       </div>
       <ul>
-        <!-- <li @Click="handleToggle(index)" :class="todo.done ? 'done':''" :style="todo.done ? 'color:red':''" v-for="(todo,index) in todos">{{todo.text}}</li> -->
-        <li @Click="handleToggle(index)" :class="{'done':todo.done}" :style="todo.done ? 'color:red':''" v-for="(todo,index) in todos">{{todo.text}}</li>
+        <!-- <li @click="handleToggle(index)" :class="todo.done ? 'done':''" :style="todo.done ? 'color:red':''" v-for="(todo,index) in todos">{{todo.text}}</li> -->
+        <li @click="handleToggle(index)" :class="{'done':todo.done}" :style="todo.done ? 'color:red':''" v-for="(todo,index) in todos">{{todo.text}}</li>
       </ul>
       <p>还剩{{remain}}本书/总共有{{this.todos.length}}本书</p>
     </div>

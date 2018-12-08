@@ -20,7 +20,8 @@ new Vue({
     title: 'vue',
     subtitle: '前端框架',
     inputText: '',
-    todos: [{
+    todos: [
+      {
         text: '吃饭',
         done: false
       },
@@ -35,27 +36,27 @@ new Vue({
       {
         text: '写代码',
         done: false
-      },
-    ],
+      }
+    ]
   },
-  computed:{
-    remain() {
+  computed: {
+    remain () {
       return this.todos.filter(v => !v.done).length
     }
   },
   methods: {
-    handleClick() {
+    handleClick () {
       this.todos.push({
         text: this.inputText,
         done: false
       })
       this.inputText = ''
     },
-    handleToggle(index) {
-      this.todos[index].done= !this.todos[index].done
+    handleToggle (index) {
+      this.todos[index].done = !this.todos[index].done
     },
-    handleClean() {
-      this.todos = this.todos.filter(v=>!v.done)
+    handleClean () {
+      this.todos = this.todos.filter(v => !v.done)
     }
   }
 })
