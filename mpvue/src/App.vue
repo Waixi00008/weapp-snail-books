@@ -50,8 +50,9 @@ export default {
 }
 .btn {
   margin-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  // padding-left: 15px;
+  // padding-right: 15px;
+  text-align: center;
   width: 100%;
   height: 40px;
   font-size: 16px;

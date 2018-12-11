@@ -13,8 +13,9 @@
             <div class="left">
               <span class="title">{{book.title}}</span>
             </div>
-            <div class="right">
-              <span class="rating">{{book.rate}} <Star :value="book.rate"/></span>
+            <div class="right text-primary">
+              <Star :value="book.rate"/>
+              <span class="rating">{{book.rate}}</span>
             </div>
           </div>
           <div class="row">
@@ -71,6 +72,7 @@ export default {
 
 <style scoped lang="scss">
 .book-card{
+  background: white;
   box-sizing: border-box;
   padding:10px;
   overflow: hidden;

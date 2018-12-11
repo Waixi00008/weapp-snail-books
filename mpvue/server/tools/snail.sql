@@ -16,3 +16,15 @@ create table books (
   created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   updated_at timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )
+
+/* 创建评论数据表 */
+create table comments(
+  id int not null auto_increment primary key,
+  openid varchar(50) not null,
+  bookid varchar(10) not null,
+  comment varchar(300) not null,
+  phone varchar(50),
+  location varchar(50),
+  created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
